@@ -20,6 +20,8 @@ import GeoChart from "./Components/GeoChart"
 import LineChart from "./Components/LiineChart"
 import BarChart from "./Components/BarChart"
 import PieChart from "./Components/PieGoogle"
+import Carousel from './Components/Carousel';
+import Card from "./Components/Card"
 // import GeoChart from "./Components/BarChart"
 const drawerWidth = 240;
 
@@ -142,17 +144,33 @@ function ResponsiveDrawer(props) {
       >
         {/* <Toolbar /> */}
         <div className=' pt-[80px]'>
-          <div className=' flex items-center justify-center max-h-[300px]'>
+          <div className=' flex items-center justify-center max-h-[450px]'>
+            <div className=' flex flex-col gap-3'>
+              <div className=' p-3 rounded-lg shadow-sm shadow-gray-500'>
+                hello world
+                kagsdfvoiukawbv
+              </div> 
+              <div className=' flex items-center gap-3'>
+               <div className=' p-3 rounded-lg shadow-sm shadow-gray-500'>
+                hello world
+                kagsdfvoiukawbv
+              </div>
+               <div className=' p-3 rounded-lg shadow-sm shadow-gray-500'>
+                hello world
+                kagsdfvoiukawbv
+              </div></div>  
+            </div>
             <GeoChart />
           </div>
           <CssBaseline />
-          <div className=' flex gap-2 items-center justify-center border-2 border-gray-400'>
+          <Carousel />
+          <CssBaseline />
+          <div className=' flex gap-2 items-center justify-center'>              <CssBaseline />
+
             <BarChart />
-            <div className=' flex flex-col gap-3'>
               <PieChart />
-              <CssBaseline />
-              <LineChart />
-            </div>
+              <LineChart />              <CssBaseline />
+
           </div>
         </div>
 

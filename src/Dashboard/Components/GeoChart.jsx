@@ -27,7 +27,7 @@ export const data = [
         },
       ]}
       chartType="GeoChart"
-      width="100%"
+      width="650px"
       height="350px"
       data={data}
     />
