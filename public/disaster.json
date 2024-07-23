@@ -1,0 +1,359 @@
+[
+  {
+    "state": "Andhra Pradesh",
+    "disasters": [
+      {
+        "type": "Cyclone",
+        "name": "Cyclone Hudhud",
+        "date": "2014-10-12",
+        "impact": "Severe damage to infrastructure, loss of life and property",
+        "description": "Cyclone Hudhud struck Andhra Pradesh, causing widespread damage."
+      },
+      {
+        "type": "Flood",
+        "name": "2019 Andhra Pradesh Floods",
+        "date": "2019-08-15",
+        "impact": "Displacement of thousands, agricultural loss",
+        "description": "Heavy rains led to severe flooding in Andhra Pradesh."
+      }
+    ]
+  },
+  {
+    "state": "Arunachal Pradesh",
+    "disasters": [
+      {
+        "type": "Landslide",
+        "name": "2017 Arunachal Landslide",
+        "date": "2017-09-25",
+        "impact": "Road closures, property damage",
+        "description": "A major landslide disrupted travel and caused property damage."
+      }
+    ]
+  },
+  {
+    "state": "Assam",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2020 Assam Floods",
+        "date": "2020-07-10",
+        "impact": "Severe damage to homes and crops",
+        "description": "Monsoon floods affected many districts in Assam."
+      },
+      {
+        "type": "Earthquake",
+        "name": "2016 Assam Earthquake",
+        "date": "2016-04-28",
+        "impact": "Building damage and loss of life",
+        "description": "An earthquake of magnitude 6.9 hit Assam."
+      }
+    ]
+  },
+  {
+    "state": "Bihar",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2016 Bihar Floods",
+        "date": "2016-08-14",
+        "impact": "Displacement of millions, extensive damage to property",
+        "description": "Severe flooding affected large areas of Bihar."
+      }
+    ]
+  },
+  {
+    "state": "Chhattisgarh",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2013 Chhattisgarh Floods",
+        "date": "2013-09-30",
+        "impact": "Significant damage to infrastructure and homes",
+        "description": "Heavy rainfall led to widespread flooding in Chhattisgarh."
+      }
+    ]
+  },
+  {
+    "state": "Goa",
+    "disasters": [
+      {
+        "type": "Cyclone",
+        "name": "Cyclone Ockhi",
+        "date": "2017-12-05",
+        "impact": "Coastal damage and loss of life",
+        "description": "Cyclone Ockhi caused significant damage along the Goa coastline."
+      }
+    ]
+  },
+  {
+    "state": "Gujarat",
+    "disasters": [
+      {
+        "type": "Earthquake",
+        "name": "2001 Gujarat Earthquake",
+        "date": "2001-01-26",
+        "impact": "Massive destruction and loss of life",
+        "description": "A devastating earthquake hit Gujarat, causing widespread damage."
+      },
+      {
+        "type": "Cyclone",
+        "name": "Cyclone Biparjoy",
+        "date": "2023-06-15",
+        "impact": "Heavy rainfall and flooding",
+        "description": "Cyclone Biparjoy impacted Gujarat with severe weather conditions."
+      }
+    ]
+  },
+  {
+    "state": "Haryana",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2016 Haryana Floods",
+        "date": "2016-07-25",
+        "impact": "Property damage and agricultural loss",
+        "description": "Intense rainfall caused flooding in Haryana."
+      }
+    ]
+  },
+  {
+    "state": "Himachal Pradesh",
+    "disasters": [
+      {
+        "type": "Landslide",
+        "name": "2018 Himachal Landslide",
+        "date": "2018-08-14",
+        "impact": "Road closures and loss of life",
+        "description": "Landslides caused major disruptions and casualties in Himachal Pradesh."
+      }
+    ]
+  },
+  {
+    "state": "Jharkhand",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2021 Jharkhand Floods",
+        "date": "2021-07-05",
+        "impact": "Widespread damage to homes and infrastructure",
+        "description": "Heavy rains led to severe flooding in Jharkhand."
+      }
+    ]
+  },
+  {
+    "state": "Karnataka",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2020 Karnataka Floods",
+        "date": "2020-09-15",
+        "impact": "Damage to homes, crops, and infrastructure",
+        "description": "Floods caused extensive damage across Karnataka."
+      }
+    ]
+  },
+  {
+    "state": "Kerala",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2018 Kerala Floods",
+        "date": "2018-08-15",
+        "impact": "Massive destruction, loss of life and property",
+        "description": "One of the worst floods in recent history affected Kerala."
+      }
+    ]
+  },
+  {
+    "state": "Madhya Pradesh",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2019 Madhya Pradesh Floods",
+        "date": "2019-08-01",
+        "impact": "Displacement of people and damage to property",
+        "description": "Heavy rains resulted in significant flooding in Madhya Pradesh."
+      }
+    ]
+  },
+  {
+    "state": "Maharashtra",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2005 Mumbai Floods",
+        "date": "2005-07-26",
+        "impact": "Severe urban flooding, property and infrastructure damage",
+        "description": "Mumbai experienced devastating floods due to heavy rainfall."
+      }
+    ]
+  },
+  {
+    "state": "Manipur",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2017 Manipur Floods",
+        "date": "2017-07-05",
+        "impact": "Damage to homes and infrastructure",
+        "description": "Heavy monsoon rains caused flooding in Manipur."
+      }
+    ]
+  },
+  {
+    "state": "Meghalaya",
+    "disasters": [
+      {
+        "type": "Landslide",
+        "name": "2019 Meghalaya Landslide",
+        "date": "2019-07-15",
+        "impact": "Roadblocks and property damage",
+        "description": "Landslides in Meghalaya caused significant disruptions."
+      }
+    ]
+  },
+  {
+    "state": "Mizoram",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2018 Mizoram Floods",
+        "date": "2018-08-10",
+        "impact": "Extensive property damage",
+        "description": "Flooding in Mizoram resulted in significant damage."
+      }
+    ]
+  },
+  {
+    "state": "Nagaland",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2020 Nagaland Floods",
+        "date": "2020-08-20",
+        "impact": "Damage to homes and infrastructure",
+        "description": "Floods affected several districts in Nagaland."
+      }
+    ]
+  },
+  {
+    "state": "Odisha",
+    "disasters": [
+      {
+        "type": "Cyclone",
+        "name": "Cyclone Fani",
+        "date": "2019-05-03",
+        "impact": "Severe damage to coastal areas",
+        "description": "Cyclone Fani caused widespread destruction in Odisha."
+      }
+    ]
+  },
+  {
+    "state": "Punjab",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2021 Punjab Floods",
+        "date": "2021-08-05",
+        "impact": "Property damage and displacement",
+        "description": "Heavy rains caused flooding in Punjab."
+      }
+    ]
+  },
+  {
+    "state": "Rajasthan",
+    "disasters": [
+      {
+        "type": "Drought",
+        "name": "2019 Rajasthan Drought",
+        "date": "2019-05-01",
+        "impact": "Severe water shortages and agricultural loss",
+        "description": "Rajasthan experienced a severe drought affecting water resources."
+      }
+    ]
+  },
+  {
+    "state": "Sikkim",
+    "disasters": [
+      {
+        "type": "Earthquake",
+        "name": "2011 Sikkim Earthquake",
+        "date": "2011-09-18",
+        "impact": "Building damage and casualties",
+        "description": "An earthquake of magnitude 6.9 hit Sikkim."
+      }
+    ]
+  },
+  {
+    "state": "Tamil Nadu",
+    "disasters": [
+      {
+        "type": "Cyclone",
+        "name": "Cyclone Vardah",
+        "date": "2016-12-12",
+        "impact": "Damage to coastal areas and infrastructure",
+        "description": "Cyclone Vardah caused significant damage in Tamil Nadu."
+      }
+    ]
+  },
+  {
+    "state": "Telangana",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2020 Telangana Floods",
+        "date": "2020-10-14",
+        "impact": "Severe flooding and property damage",
+        "description": "Heavy rains led to flooding in Telangana."
+      }
+    ]
+  },
+  {
+    "state": "Tripura",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2017 Tripura Floods",
+        "date": "2017-07-20",
+        "impact": "Displacement of people and damage to property",
+        "description": "Flooding affected many areas in Tripura."
+      }
+    ]
+  },
+  {
+    "state": "Uttar Pradesh",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2018 Uttar Pradesh Floods",
+        "date": "2018-08-10",
+        "impact": "Damage to homes and infrastructure",
+        "description": "Heavy rainfall caused severe flooding in Uttar Pradesh."
+      }
+    ]
+  },
+  {
+    "state": "Uttarakhand",
+    "disasters": [
+      {
+        "type": "Flood",
+        "name": "2013 Uttarakhand Floods",
+        "date": "2013-06-15",
+        "impact": "Massive destruction and loss of life",
+        "description": "Severe floods caused extensive damage in Uttarakhand."
+      }
+    ]
+  },
+  {
+    "state": "West Bengal",
+    "disasters": [
+      {
+        "type": "Cyclone",
+        "name": "Cyclone Amphan",
+        "date": "2020-05-20",
+        "impact": "Severe damage to coastal areas",
+        "description": "Cyclone Amphan caused widespread damage in West Bengal."
+      }
+    ]
+  }
+]

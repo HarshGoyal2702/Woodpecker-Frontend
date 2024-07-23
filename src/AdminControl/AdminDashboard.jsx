@@ -18,7 +18,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
 
-import Table from  "./Table"
+import Table from "./Table";
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -47,15 +47,16 @@ function ResponsiveDrawer(props) {
       <Divider />
       <List>
         {["All Agents", "All Disasters", "New Disaster"].map((text, index) => (
-                <Link to={`list/${text.toLowerCase().trim().replace(" ","-")}`}>
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>      </Link>
+          <Link to={`list/${text.toLowerCase().trim().replace(" ", "-")}`}>
+            <ListItem key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                </ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>{" "}
+          </Link>
         ))}
       </List>
       <Divider />
@@ -150,8 +151,7 @@ function ResponsiveDrawer(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
-        <Table/>
-        
+        <Table />
       </Box>
     </Box>
   );

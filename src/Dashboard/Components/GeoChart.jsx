@@ -27,7 +27,7 @@ export const data = [
         },
       ]}
       chartType="GeoChart"
-      data={data} className="w-[400px] md:mt-10 mt-0 h-[350px] md:w-[650px] md:h-[350px]"
+      data={data} className="w-[400px] h-[350px] md:w-[650px] md:h-[350px]"
     />
   );
 }

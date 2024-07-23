@@ -1,43 +1,57 @@
-import * as React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
-import Toolbar from "@mui/material/Toolbar";
-import GeoChart from "./Components/GeoChart";
-import LineChart from "./Components/LiineChart";
-import BarChart from "./Components/BarChart";
-import PieChart from "./Components/PieGoogle";
+import HomeIcon from "@mui/icons-material/Home";
+import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import LocationSearchingIcon from "@mui/icons-material/LocationSearching";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
+import FloodIcon from "@mui/icons-material/Flood";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import GeoMapLeaflet from "./Components/GeoChartLeaflet";
 import Carousel from "./Components/Carousel";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import GeoMapLeaflet from "./Components/GeoChartLeaflet"
-import Typography from "@mui/material/Typography";
-// import GeoChart from "./Components/BarChart"
+import GeoChart from "./Components/GeoChart"
+import About from "../components/About"
+
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
   const { window } = props;
-  const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [isClosing, setIsClosing] = React.useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
   const handleDrawerClose = () => {
     setIsClosing(true);
     setMobileOpen(false);
   };
+
+  const NavList = [
+    { name: "Home", icon: <HomeIcon />, link: "/" },
+    { name: "DashBoard", icon: <SpaceDashboardIcon />, link: "/dashboard" },
+    { name: "Find By Location", icon: <LocationOnIcon />, link: "/" },
+    { name: "Map", icon: <LocationSearchingIcon />, link: "/map" },
+    { name: "Admin", icon: <AdminPanelSettingsIcon />, link: "/admin" },
+    { name: "Disaster", icon: <FloodIcon />, link: "/disaster" },
+    { name: "Precautions", icon: <FavoriteIcon />, link: "/precautions" },
+  ];
 
   const handleDrawerTransitionEnd = () => {
     setIsClosing(false);
@@ -54,48 +68,34 @@ function ResponsiveDrawer(props) {
       <Toolbar />
       <Divider />
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
+        {NavList.map((item) => (
+          <ListItem key={item.name} disablePadding>
+            <ListItemButton component={Link} to={item.link}>
+              <ListItemIcon>{item.icon}</ListItemIcon>
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
       </List>
       <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
     </div>
   );
 
-  // Remove this const when copying and pasting into your project.
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ display: "flex" }}>
-      {/* <CssBaseline /> */}
+      <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
         }}
+        
       >
-        <Toolbar>
+        <Toolbar className="">
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -115,13 +115,11 @@ function ResponsiveDrawer(props) {
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
         aria-label="mailbox folders"
       >
-        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
-          onTransitionEnd={handleDrawerTransitionEnd}
-          onClose={handleDrawerClose}
+          onClose={handleDrawerToggle}
           ModalProps={{
             keepMounted: true, // Better open performance on mobile.
           }}
@@ -157,102 +155,98 @@ function ResponsiveDrawer(props) {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
         }}
       >
-        {/* <Toolbar /> */}
-        <div className=" pt-[80px]">
-          <div className=" flex md:flex-row flex-col items-center justify-center max-h-[450px]">
-            <div className="z-[10] flex flex-col gap-3">
-              <Card sx={{ minWidth: 275 }}>
+        <Toolbar />
+        <div className="pt-[80px]">
+          <div className="flex md:flex-row flex-col items-center justify-center max-h-[450px]">
+            <div className="z-[10] flex flex-col gap-3 mb-8 mr-5 ">
+              <Card sx={{ maxWidth: 600 }} className="shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
                 <CardContent>
                   <Typography
                     sx={{ fontSize: 14 }}
                     color="text.secondary"
                     gutterBottom
                   >
-                    Word of the Day
+                    Welcome to
                   </Typography>
-                  <Typography variant="h5" component="div">
-                    Disaster forecasting
-                  </Typography>
-                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
-                  </Typography>
-                  <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
-              </Card>   <div className=" flex items-center justify-center my-4 gap-4">
-              <Card sx={{ minWidth: 275 }}>
-                <CardContent>
-                  <Typography
-                    sx={{ fontSize: 14 }}
-                    color="text.secondary"
-                    gutterBottom
-                  >
-                    Word of the Day
-                  </Typography>
-                  <Typography variant="h5" component="div">
-                    Disaster forecasting
+                  <Typography variant="h5" component="div" className="text-green-500 font-semibold drop-shadow-xl">
+                    Disaster Management & Prediction
                   </Typography>
                   <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
+                    AI-powered Insights
                   </Typography>
                   <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
-              </Card>{" "}
-              <Card sx={{ minWidth: 275 }}>
-                <CardContent>
-                  <Typography
-                    sx={{ fontSize: 14 }}
-                    color="text.secondary"
-                    gutterBottom
-                  >
-                    
-                  </Typography>
-                  <Typography variant="h5" component="div">
-                    Disaster forecasting
-                  </Typography>
-                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                    adjective
-                  </Typography>
-                  <Typography variant="body2">
-                    well meaning and kindly.
-                    <br />
-                    {'"a benevolent smile"'}
+                    Our advanced AI models detect and predict disasters based on
+                    current weather conditions. Search by location to get
+                    real-time updates and take necessary precautions.
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button size="small">Learn More</Button>
                 </CardActions>
               </Card>
+
+              <div className="flex items-center justify-center my-4 gap-4">
+                <Card sx={{ maxWidth: 320 }}>
+                  <CardContent>
+                    <Typography
+                      sx={{ fontSize: 14 }}
+                      color="text.secondary"
+                      gutterBottom
+                    >
+                      Feature
+                    </Typography>
+                    <Typography variant="h5" component="div">
+                      Disaster Detection
+                    </Typography>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                      Real-time Analysis
+                    </Typography>
+                    <Typography variant="body2">
+                      Our AI analyzes real-time data to detect potential
+                      disasters, providing timely alerts and minimizing risks.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">Learn More</Button>
+                  </CardActions>
+                </Card>
+
+                <Card sx={{ maxWidth: 320 }}>
+                  <CardContent>
+                    <Typography
+                      sx={{ fontSize: 14 }}
+                      color="text.secondary"
+                      gutterBottom
+                    >
+                      Feature
+                    </Typography>
+                    <Typography variant="h5" component="div">
+                      Search by Location
+                    </Typography>
+                    <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                      Customized Reports
+                    </Typography>
+                    <Typography variant="body2">
+                      Enter your location to receive customized disaster
+                      predictions and safety measures specific to your area.
+                    </Typography>
+                  </CardContent>
+                  <CardActions>
+                    <Button size="small">Learn More</Button>
+                  </CardActions>
+                </Card>
+              </div>
             </div>
+            <div className="h-[50vh] w-[50vw]">
+              {/* <GeoMapLeaflet /> */}
+              <GeoChart/>
             </div>
-            {/* <GeoChart /> */}
-            <div className=" h-[50vh] w-[50vw]">
-            <GeoMapLeaflet  /></div>
           </div>
           <CssBaseline />
           <Carousel />
           <CssBaseline />
-          {/* <div className=" flex md:flex-row flex-col gap-2 items-center justify-center">
-            {" "}
-            <CssBaseline />
-            <BarChart />
-            <PieChart />
-            <LineChart /> <CssBaseline />
-          </div> */}
         </div>
+        <About/>
       </Box>
     </Box>
   );
