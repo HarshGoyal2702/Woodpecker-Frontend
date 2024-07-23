@@ -15,13 +15,17 @@ import ListItemText from "@mui/material/ListItemText";
 import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import GeoChart from "./Components/GeoChart";
 import LineChart from "./Components/LiineChart";
 import BarChart from "./Components/BarChart";
 import PieChart from "./Components/PieGoogle";
 import Carousel from "./Components/Carousel";
-import Card from "./Components/Card";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import GeoMapLeaflet from "./Components/GeoChartLeaflet"
+import Typography from "@mui/material/Typography";
 // import GeoChart from "./Components/BarChart"
 const drawerWidth = 240;
 
@@ -157,32 +161,97 @@ function ResponsiveDrawer(props) {
         <div className=" pt-[80px]">
           <div className=" flex md:flex-row flex-col items-center justify-center max-h-[450px]">
             <div className="z-[10] flex flex-col gap-3">
-              <div className=" p-3 rounded-lg shadow-sm shadow-gray-500">
-                hello world kagsdfvoiukawbv
-              </div>
-              <div className=" flex items-center gap-3">
-                <div className=" p-3 rounded-lg shadow-sm shadow-gray-500">
-                  hello world kagsdfvoiukawbv
-                </div>
-                <div className=" p-3 rounded-lg shadow-sm shadow-gray-500">
-                  hello world kagsdfvoiukawbv
-                </div>
-              </div>
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    Word of the Day
+                  </Typography>
+                  <Typography variant="h5" component="div">
+                    Disaster forecasting
+                  </Typography>
+                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    adjective
+                  </Typography>
+                  <Typography variant="body2">
+                    well meaning and kindly.
+                    <br />
+                    {'"a benevolent smile"'}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Learn More</Button>
+                </CardActions>
+              </Card>   <div className=" flex items-center justify-center my-4 gap-4">
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    Word of the Day
+                  </Typography>
+                  <Typography variant="h5" component="div">
+                    Disaster forecasting
+                  </Typography>
+                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    adjective
+                  </Typography>
+                  <Typography variant="body2">
+                    well meaning and kindly.
+                    <br />
+                    {'"a benevolent smile"'}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Learn More</Button>
+                </CardActions>
+              </Card>{" "}
+              <Card sx={{ minWidth: 275 }}>
+                <CardContent>
+                  <Typography
+                    sx={{ fontSize: 14 }}
+                    color="text.secondary"
+                    gutterBottom
+                  >
+                    
+                  </Typography>
+                  <Typography variant="h5" component="div">
+                    Disaster forecasting
+                  </Typography>
+                  <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                    adjective
+                  </Typography>
+                  <Typography variant="body2">
+                    well meaning and kindly.
+                    <br />
+                    {'"a benevolent smile"'}
+                  </Typography>
+                </CardContent>
+                <CardActions>
+                  <Button size="small">Learn More</Button>
+                </CardActions>
+              </Card>
             </div>
-            <GeoChart />
+            </div>
+            {/* <GeoChart /> */}
+            <div className=" h-[50vh] w-[50vw]">
+            <GeoMapLeaflet  /></div>
           </div>
           <CssBaseline />
           <Carousel />
           <CssBaseline />
-          <div className=" flex md:flex-row flex-col gap-2 items-center justify-center">
+          {/* <div className=" flex md:flex-row flex-col gap-2 items-center justify-center">
             {" "}
             <CssBaseline />
             <BarChart />
-            <hr className="w-[400px]"/>
             <PieChart />
-            <hr className="w-[400px]" />
             <LineChart /> <CssBaseline />
-          </div>
+          </div> */}
         </div>
       </Box>
     </Box>

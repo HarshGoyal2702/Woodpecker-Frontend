@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.markercluster-map {
+    height: 90vh;
+  }
+  .App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .leaflet-container {
+    height: 600px;
+    width: 100%;
+  }
+  
+  .leaflet-div-icon {
+    background: transparent;
+    border: none;
+  }
+  
